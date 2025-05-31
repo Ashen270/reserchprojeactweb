@@ -472,7 +472,7 @@ const Index = () => {
             <div>
               <h3 className="text-xl font-inter font-bold mb-4">Research Project</h3>
               <p className="text-gray-400">
-                Advanced Machine Learning Applications in Healthcare Data Analysis
+                Exploring the Connection Between the Temperature Parameter and Emergent Behavior in Large Language Models
               </p>
             </div>
             <div>
