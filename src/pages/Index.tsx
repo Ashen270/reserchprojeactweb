@@ -179,33 +179,45 @@ const Index = () => {
   const techStack = [
     {
       name: "Python",
-      logo: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=100&h=100&fit=crop&crop=center",
+      logo: "https://www.python.org/static/community_logos/python-logo.png",
       usage:
-        "Primary programming language for data analysis, machine learning model development, and statistical computations",
+        "Core programming language for data analysis, machine learning, and scientific computing in the project.",
     },
     {
-      name: "TensorFlow",
-      logo: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=100&h=100&fit=crop&crop=center",
+      name: "Matplotlib",
+      logo: "https://matplotlib.org/_static/images/logo2.svg",
       usage:
-        "Deep learning framework for building and training neural networks for medical image analysis",
+        "Visualization library for creating static, animated, and interactive plots to represent research data and results.",
     },
     {
       name: "Pandas",
-      logo: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&h=100&fit=crop&crop=center",
+      logo: "https://pandas.pydata.org/static/img/pandas_mark.svg",
       usage:
-        "Data manipulation and analysis library for processing healthcare datasets and clinical data",
+        "Essential library for data manipulation, cleaning, and analysis of structured healthcare datasets.",
+    },
+    {
+      name: "Seaborn",
+      logo: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg",
+      usage:
+        "Statistical data visualization library built on top of Matplotlib, used for advanced and attractive data visualizations.",
+    },
+    {
+      name: "NumPy",
+      logo: "https://numpy.org/images/logo.svg",
+      usage:
+        "Fundamental package for numerical computations, supporting efficient array operations and mathematical functions.",
     },
     {
       name: "Scikit-learn",
-      logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&h=100&fit=crop&crop=center",
+      logo: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png",
       usage:
-        "Machine learning library for implementing classification algorithms and model evaluation",
+        "Machine learning library for implementing classification, regression, clustering algorithms, and model evaluation.",
     },
     {
-      name: "Jupyter",
-      logo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=100&h=100&fit=crop&crop=center",
+      name: "Jupyter Notebook",
+      logo: "https://jupyter.org/assets/homepage/main-logo.svg",
       usage:
-        "Interactive development environment for data exploration, prototyping, and result visualization",
+        "Interactive environment for code development, data exploration, visualization, and sharing research workflows.",
     },
     {
       name: "Google Colab",
