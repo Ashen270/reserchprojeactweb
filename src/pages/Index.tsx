@@ -208,10 +208,34 @@ const Index = () => {
         "Interactive development environment for data exploration, prototyping, and result visualization",
     },
     {
-      name: "OpenCV",
-      logo: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=100&h=100&fit=crop&crop=center",
+      name: "Google Colab",
+      logo: "https://colab.research.google.com/img/colab_favicon_256px.png",
       usage:
-        "Computer vision library for medical image preprocessing, feature extraction, and analysis",
+        "Cloud-based Jupyter notebook environment for running experiments, sharing code, and leveraging free GPU resources for large-scale model training and analysis",
+    },
+    {
+      name: "LangChain",
+      logo: "https://avatars.githubusercontent.com/u/139944330?s=200&v=4",
+      usage:
+        "Framework for developing applications powered by language models, enabling integration of LLMs for advanced data analysis, information retrieval, and conversational AI in healthcare research workflows",
+    },
+    {
+      name: "OpenAI",
+      logo: "https://seeklogo.com/images/O/openai-logo-8B9BFEDC26-seeklogo.com.png",
+      usage:
+        "Provider of advanced language models (such as GPT-4) for natural language processing, data analysis, and conversational AI integration in healthcare research.",
+    },
+    {
+      name: "Anthropic",
+      logo: "https://avatars.githubusercontent.com/u/103813127?s=200&v=4",
+      usage:
+        "Supplier of large language models (like Claude) used for safe, reliable AI-driven data analysis, information extraction, and research assistance in healthcare.",
+    },
+    {
+      name: "Fireworks AI",
+      logo: "https://fireworks.ai/favicon.ico",
+      usage:
+        "Platform for scalable, high-performance language model APIs, enabling efficient integration of generative AI for data analysis and research workflows.",
     },
   ];
 
