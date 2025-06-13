@@ -85,32 +85,39 @@ const Index = () => {
 
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Principal Researcher",
-      bio: "PhD in Computer Science with expertise in AI and Machine Learning",
+      name: "Dr. (Mrs.) P. L. M. Prabhani",
+      role: "Main Supervisor",
+      bio: "Information and Communication Technology Department, Faculty of Technology, University of Sri Jayewardenepura",
       image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face",
+        "/drprabani.jpeg", 
     },
     {
-      name: "Alex Chen",
-      role: "Research Assistant",
-      bio: "Final year Computer Science student specializing in data analysis",
+      name: "Mrs. Sankani Heenkenda",
+      role: "Co Supervisor",
+      bio: "Information and Communication Technology Department, Faculty of Technology, University of Sri Jayewardenepura",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+        "/sanjani madam.jpeg",
     },
     {
-      name: "Maria Rodriguez",
-      role: "Technical Lead",
-      bio: "Master's student in Software Engineering with focus on system architecture",
+      name: "B.N. Dinanjana",
+      role: "ICT/20/834",
+      bio: "BICT(hons) Undergrduate of University of Sri Jayewardenepura, Faculty Technology ",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+        "/nipun.jpeg",
     },
     {
-      name: "David Kim",
-      role: "Data Analyst",
-      bio: "Statistics undergraduate with experience in research methodology",
+      name: "P.M.L. Darshana",
+      role: "ICT/20/807",
+      bio: "BICT(hons) Undergrduate of University of Sri Jayewardenepura, Faculty Technology",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+        "/lahiru.jpeg",
+    },
+     {
+      name: "W.M.A.S. Wickramasinghe",
+      role: "ICT/20/961",
+      bio: "BICT(hons) Undergrduate of University of Sri Jayewardenepura, Faculty Technology",
+      image:
+        "/ashen.jpeg",
     },
   ];
 
