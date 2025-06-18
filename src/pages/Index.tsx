@@ -147,10 +147,10 @@ const Index = () => {
       url: "https://drive.google.com/file/d/1JH1WuChpRslp4ctD2cho_rD2v_Suc5_l/view?usp=sharing"
     },
     {
-      title: "Our Reaserch Paper",
+      title: "Reaserch Paper",
       description: "Complete research paper",
       type: "PDF",
-      url: "https://drive.google.com/file/d/1KspM3Nx8tmurPr55k7pHTZ1CNevLL4hl/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1MDbl5ztw8ypJKjGMLnw9pk53jjk7_IbE/view?usp=drive_link"
     },
   ];
 
