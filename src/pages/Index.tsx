@@ -1,27 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import {
-  ArrowUp,
-  Download,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  Users,
-  FileText,
-  Info,
-} from "lucide-react";
+import { ArrowUp, Download, Mail, Phone, MapPin, FileText, Menu, X } from "lucide-react";
+import { GrPlan } from "react-icons/gr";
+import { AiOutlineExperiment } from "react-icons/ai";
+import { IoBulbOutline } from "react-icons/io5";
+import { FiDatabase } from "react-icons/fi";
+import { BsFileEarmarkBarGraph } from "react-icons/bs";
+import { RiPresentationFill } from "react-icons/ri"
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, } from "@/components/ui/card";
+import { VerticalTimeline, VerticalTimelineElement, } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import TeamCarousel from "@/components/TeamCarousel";
 import KeyFindings from "@/components/KeyFindings";
@@ -76,12 +63,18 @@ const Index = () => {
     });
   };
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuOpen(false); // close the mobile menu after navigation
   };
+
+
+
 
   const teamMembers = [
     {
@@ -89,7 +82,7 @@ const Index = () => {
       role: "Main Supervisor",
       bio: "Information and Communication Technology Department, Faculty of Technology, University of Sri Jayewardenepura",
       image:
-        "/drprabani.jpeg", 
+        "/drprabani.jpeg",
     },
     {
       name: "Mrs. Sankani Heenkenda",
@@ -112,7 +105,7 @@ const Index = () => {
       image:
         "/lahiru.jpeg",
     },
-     {
+    {
       name: "W.M.A.S. Wickramasinghe",
       role: "ICT/20/961",
       bio: "BICT(hons) Undergrduate of University of Sri Jayewardenepura, Faculty Technology",
@@ -156,40 +149,40 @@ const Index = () => {
 
   const timelineEvents = [
     {
-      date: "September 2024",
-      title: "Project Initiation",
-      description: "Research topic selection and initial planning phase",
-      icon: <Calendar className="w-4 h-4" />,
+      date: "July – November 2024",
+      title: "Project Planning and Literature Review",
+      description: "The project began with defining research objectives and conducting a comprehensive literature review to identify gaps and finalize the theoretical foundation.",
+      icon: <GrPlan className="w-4 h-4" />,
     },
     {
-      date: "October 2024",
-      title: "Literature Review",
-      description: "Comprehensive study of existing research and methodologies",
-      icon: <FileText className="w-4 h-4" />,
+      date: "November – December 2024",
+      title: "Proposal and Environment Setup",
+      description: "The research proposal was drafted and submitted. Following approval, the experimental environment and necessary tools, including APIs and cloud-based LLMs, were set up and configured.",
+      icon: <IoBulbOutline className="w-4 h-4" />,
     },
     {
-      date: "November 2024",
-      title: "Data Collection",
-      description: "Gathering and preprocessing research data",
-      icon: <Info className="w-4 h-4" />,
+      date: "January – February 2025",
+      title: "Initial Experimentation Phase",
+      description: "Initial tests were conducted to evaluate the performance of language models under various temperature settings, assessing creative, critical, and general knowledge capabilities.",
+      icon: <AiOutlineExperiment className="w-4 h-4" />,
     },
     {
-      date: "December 2024",
-      title: "Analysis Phase",
-      description: "Data analysis and initial findings",
-      icon: <Users className="w-4 h-4" />,
+      date: "February – March 2025",
+      title: "Data Collection and Refinement",
+      description: "Early experiment results were analyzed, adjustments were made to improve data quality, and additional experiments were conducted to complete data collection",
+      icon: <FiDatabase className="w-4 h-4" />,
     },
     {
-      date: "January 2025",
-      title: "Implementation",
-      description: "Development and testing of proposed solutions",
-      icon: <FileText className="w-4 h-4" />,
+      date: "March – April 2025",
+      title: "Data Analysis and Visualization",
+      description: "Comprehensive data analysis was performed, focusing on trends and behavioral patterns. The findings were visualized to support clear interpretation of results.",
+      icon: <BsFileEarmarkBarGraph className="w-4 h-4" />,
     },
     {
-      date: "February 2025",
+      date: "April – June 2025",
       title: "Final Presentation",
-      description: "Project completion and presentation of results",
-      icon: <Calendar className="w-4 h-4" />,
+      description: "The research findings were compiled into a draft report, reviewed for accuracy and clarity, and finalized for submission.",
+      icon: <RiPresentationFill className="w-4 h-4" />,
     },
   ];
 
@@ -272,60 +265,58 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Navigation Bar with gradient */}
       <nav className="fixed top-0 w-full bg-slate-900 backdrop-blur-sm shadow-lg z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0">
-              {/* <h2 className="text-xl font-bold text-white">Research Project</h2> */}
-            </div>
-            <div className="hidden md:block">
-              <div className="ml-10 font-inter flex items-baseline space-x-4">
+      <div className="max-w-7xl mx-auto px-0 sm:px-4 lg:px-6"> {/* Remove excessive padding */}
+        <div className="flex justify-between items-center h-16">
+          
+          {/* ICON: aligned hard left */}
+          <div className="flex items-center space-x-2 flex-shrink-0 text-white pl-2">
+            <img
+              src="/icon.png"
+              alt="University Logo"
+              className="w-8 h-8 "/>
+            {/* <span className="font-semibold text-xs">Exploring the Connection Between the Temperature Parameter and
+            Emergent Behavior in Large Language Models</span> */}
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:block">
+            <div className="ml-10 font-inter flex items-baseline space-x-4">
+              {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
                 <button
-                  onClick={() => scrollToSection("home")}
-                  className="text-white  px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
-                  Home
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
                 </button>
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="text-white  px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  About
-                </button>
-                <button
-                  onClick={() => scrollToSection("timeline")}
-                  className="text-white   px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  Timeline
-                </button>
-                <button
-                  onClick={() => scrollToSection("findings")}
-                  className="text-white   px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  Findings
-                </button>
-                <button
-                  onClick={() => scrollToSection("documents")}
-                  className="text-white   px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  Documents
-                </button>
-                <button
-                  onClick={() => scrollToSection("team")}
-                  className="text-white   px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  Team
-                </button>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="text-white   px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  Contact
-                </button>
-              </div>
+              ))}
             </div>
           </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden pr-2">
+            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white focus:outline-none">
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
-      </nav>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-slate-800 px-4 pb-4 space-y-2">
+          {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
+            <button
+              key={section}
+              onClick={() => scrollToSection(section)}
+              className="block w-full text-left text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition"
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          ))}
+        </div>
+      )}
+    </nav>
 
       {/* Landing Section */}
 
@@ -422,17 +413,17 @@ const Index = () => {
                 Project Overview
               </h3>
               <p className="text-gray-700 font-josefin mb-4">
-                Our research addresses critical challenges in healthcare data
-                processing by leveraging cutting-edge machine learning
-                techniques. The project spans multiple phases, from data
-                collection and preprocessing to model development and clinical
-                validation.
+                This project explores how the temperature parameter
+                influences emergent behaviors in Large Language Models (LLMs),
+                such as sudden improvements in reasoning or creativity.
+                While previous studies focus on model size, this research
+                uniquely examines temperature as a key inference time factor.
               </p>
               <p className="text-gray-700 font-josefin">
-                Expected outcomes include improved diagnostic tools, enhanced
-                patient care protocols, and contributions to the broader field
-                of medical informatics through published research and
-                open-source implementations.
+                By systematically testing LLM outputs across tasks and temperature ranges,
+                the study aims to uncover thresholds where behavioral shifts occur.
+                Findings will offer insights into optimizing model performance,
+                improving reliability, and enhancing safety in real-world AI applications.
               </p>
             </div>
           </div>
@@ -599,7 +590,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section
+      {/* <section
         id="contact"
         className="py-20 bg-blue-600/90 backdrop-blur-sm text-white relative"
       >
@@ -643,7 +634,7 @@ const Index = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer with gradient */}
       <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
