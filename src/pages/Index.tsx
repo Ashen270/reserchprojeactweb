@@ -126,21 +126,31 @@ const Index = () => {
       title: "Research Proposal",
       description: "Initial project proposal and methodology",
       type: "PDF",
+      url: "https://drive.google.com/file/d/1BlYA_Ct0vdE4WsBBFImoCZ_HnKjQ1K0E/view?usp=sharing"
     },
     {
       title: "Literature Review",
       description: "Comprehensive review of related work",
       type: "PDF",
+      url: "https://docs.google.com/document/d/1EVSC3bkPxtZdLofDw9ZNGp8DB6rv-o0y/edit?usp=sharing&ouid=115012069173261136429&rtpof=true&sd=true"
     },
     {
       title: "Progress Report",
       description: "Mid-term progress and findings",
       type: "PDF",
+      url: "https://docs.google.com/presentation/d/1glvw-Jcrui7_e7xxIoaZ1tJ71RZyFMmF5_8p12ezzow/edit?usp=sharing"
     },
     {
       title: "Final Presentation",
       description: "Complete research presentation slides",
       type: "PDF",
+      url: "https://drive.google.com/file/d/1JH1WuChpRslp4ctD2cho_rD2v_Suc5_l/view?usp=sharing"
+    },
+    {
+      title: "Our Reaserch Paper",
+      description: "Complete research paper",
+      type: "PDF",
+      url: "https://drive.google.com/file/d/1KspM3Nx8tmurPr55k7pHTZ1CNevLL4hl/view?usp=sharing"
     },
   ];
 
@@ -386,7 +396,7 @@ const Index = () => {
                   </div>
                   <span>
                     Examine the effects and characterize the impact of
-                    “temperature” parameter on LLMs output
+                    "temperature" parameter on LLMs output
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -557,7 +567,7 @@ const Index = () => {
                 <CardContent>
                   <Button
                     className="w-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                    onClick={() => window.open("#", "_blank")}
+                    onClick={() => window.open(doc.url, "_blank")}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download {doc.type}
