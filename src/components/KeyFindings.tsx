@@ -164,7 +164,7 @@ const KeyFindings = ({ findings }: KeyFindingsProps) => {
       category: "Extra",
       imageUrl: "/charts/total_score_comparison Across the all Models_General_Knowledge.png",
     },
- 
+
   ];
 
 
@@ -235,7 +235,7 @@ const KeyFindings = ({ findings }: KeyFindingsProps) => {
                             {finding.category}
                           </span>
                         </div>
-                        
+
                         {/* <CardDescription>{finding.description}</CardDescription> */}
                       </CardHeader>
                       <CardContent>
@@ -341,9 +341,9 @@ const KeyFindings = ({ findings }: KeyFindingsProps) => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.3 }}
-                  className="max-w-4xl max-h-[90vh] object-contain cursor-pointer"
-                  onClick={() => setZoomedImageData(null)}
+                  className="w-[90vw] h-auto max-h-[80vh] sm:max-w-4xl object-contain cursor-pointer rounded-md"
                 />
+
 
                 {/* Navigation Arrows */}
                 {zoomedImageData.images.length > 1 && (
