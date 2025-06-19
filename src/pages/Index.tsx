@@ -217,12 +217,12 @@ const Index = () => {
       usage:
         "Fundamental package for numerical computations, supporting efficient array operations and mathematical functions.",
     },
-    {
-      name: "Scikit-learn",
-      logo: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png",
-      usage:
-        "Machine learning library for implementing classification, regression, clustering algorithms, and model evaluation.",
-    },
+    // {
+    //   name: "Scikit-learn",
+    //   logo: "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png",
+    //   usage:
+    //     "Machine learning library for implementing classification, regression, clustering algorithms, and model evaluation.",
+    // },
     {
       name: "Jupyter Notebook",
       logo: "https://jupyter.org/assets/homepage/main-logo.svg",
