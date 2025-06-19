@@ -265,58 +265,58 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Navigation Bar with gradient */}
       <nav className="fixed top-0 w-full bg-slate-900 backdrop-blur-sm shadow-lg z-50">
-      <div className="max-w-7xl mx-auto px-0 sm:px-4 lg:px-6"> {/* Remove excessive padding */}
-        <div className="flex justify-between items-center h-16">
-          
-          {/* ICON: aligned hard left */}
-          <div className="flex items-center space-x-2 flex-shrink-0 text-white pl-2">
-            <img
-              src="/icon.png"
-              alt="University Logo"
-              className="w-8 h-8 "/>
-            {/* <span className="font-semibold text-xs">Exploring the Connection Between the Temperature Parameter and
-            Emergent Behavior in Large Language Models</span> */}
-          </div>
+        <div className="max-w-7xl mx-auto px-0 sm:px-4 lg:px-6"> {/* Remove excessive padding */}
+          <div className="flex justify-between items-center h-16">
 
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 font-inter flex items-baseline space-x-4">
-              {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
-                <button
-                  key={section}
-                  onClick={() => scrollToSection(section)}
-                  className="text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
-                >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </button>
-              ))}
+            {/* ICON: aligned hard left */}
+            <div className="flex items-center space-x-2 flex-shrink-0 text-white pl-2">
+              <img
+                src="/icon.png"
+                alt="University Logo"
+                className="w-8 h-8 " />
+              {/* <span className="font-semibold text-xs">Exploring the Connection Between the Temperature Parameter and
+            Emergent Behavior in Large Language Models</span> */}
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:block">
+              <div className="ml-10 font-inter flex items-baseline space-x-4">
+                {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(section)}
+                    className="text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105"
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden pr-2">
+              <button onClick={() => setMenuOpen(!menuOpen)} className="text-white focus:outline-none">
+                {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
             </div>
           </div>
+        </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden pr-2">
-            <button onClick={() => setMenuOpen(!menuOpen)} className="text-white focus:outline-none">
-              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+        {/* Mobile Dropdown Menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-slate-800 px-4 pb-4 space-y-2">
+            {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
+              <button
+                key={section}
+                onClick={() => scrollToSection(section)}
+                className="block w-full text-left text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            ))}
           </div>
-        </div>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-slate-800 px-4 pb-4 space-y-2">
-          {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
-            <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className="block w-full text-left text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition"
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
-          ))}
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
 
       {/* Landing Section */}
 
@@ -440,7 +440,7 @@ const Index = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {techStack.map((tech, index) => (
+              {techStack.slice(0, 9).map((tech, index) => (
                 <Card
                   key={index}
                   className="hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer bg-white border border-gray-200"
@@ -463,6 +463,35 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+
+            {/* Centered final row */}
+            {techStack.length > 9 && (
+              <div className="flex justify-center gap-8 mt-8">
+                {techStack.slice(9).map((tech, index) => (
+                  <Card
+                    key={`last-${index}`}
+                    className="hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer bg-white border border-gray-200"
+                  >
+                    <CardContent className="p-6 text-center">
+                      <div className="mb-4">
+                        <img
+                          src={tech.logo}
+                          alt={`${tech.name} logo`}
+                          className="w-16 h-16 mx-auto rounded-lg object-cover transition-transform duration-300 hover:scale-110"
+                        />
+                      </div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                        {tech.name}
+                      </h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {tech.usage}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            )}
+
           </div>
         </div>
       </section>
