@@ -281,7 +281,7 @@ const Index = () => {
             {/* Desktop Menu */}
             <div className="hidden md:block">
               <div className="ml-10 font-inter flex items-baseline space-x-4">
-                {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
+                {["home", "about", "timeline", "findings", "documents", "team"].map((section) => (
                   <button
                     key={section}
                     onClick={() => scrollToSection(section)}
@@ -305,7 +305,7 @@ const Index = () => {
         {/* Mobile Dropdown Menu */}
         {menuOpen && (
           <div className="md:hidden bg-slate-800 px-4 pb-4 space-y-2">
-            {["home", "about", "timeline", "findings", "documents", "team", "contact"].map((section) => (
+            {["home", "about", "timeline", "findings", "documents", "team"].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
